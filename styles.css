@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+:root{
+    --lightyellow: #FFC928;
+    --brightyellow: #FFBC00;
+    --orange: #FF9200;
+    --lightblue: #07B7EB;
+    --darkblue: #0E3F7B;
+    --white: #eeeeee;
+    --dark: #0D1A20;
+}
+
+
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+
+h1 {
+    color: var(--lightyellow);
+    font-family: 'Bungee Spice';
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem auto;
+    padding: 0.5rem;
+    width: 50%;
+    border: 0.5rem solid var(--orange);
+    border-radius: 1rem;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 50%;
+    /* border: 0.5rem solid var(--orange);
+    border-radius: 1rem; */
+}
+
+.main-container .guess-input{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.main-container .guess-input #input{
+    padding: .5rem;
+    border: .4rem solid var(--brightyellow);
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    outline: none;
+}
+
+.main-container .guess-input #guess-button{
+    font-family: 'Bungee Spice';
+    font-size: 1.5rem;
+    border: .5rem solid var(--orange);
+    border-radius: 1rem;
+    padding: .5rem 2rem;
+    background-color: transparent;
+}
+
+.main-container #guess-container{
+    display: flex;
+    gap: 4rem;
+    margin: .5rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result{
+    font-size: 1rem;
+    color: var(--orange);
+}
+
+.guessedNumber{
+    padding: .5rem;
+    border: .4rem solid var(--brightyellow);
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    outline: none;
+}
+
+/* .main-container #guess-container input:focus{
+    border: .5rem solid var(--orange);
+    outline: none;
+} */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
