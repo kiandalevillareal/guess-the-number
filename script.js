@@ -1,6 +1,7 @@
 const mysteryNumber = Math.floor(Math.random() * 100) + 1;
 const guessButton = document.querySelector('#guess-button');
 const input = document.querySelector('#input');
+const guessItem = document.querySelector('#guess-item');
 const guessContainer = document.querySelector('#guess-container');
 
 console.log(mysteryNumber);
@@ -18,22 +19,24 @@ guessButton.addEventListener('click', () =>{
     const result = document.createElement('p');
     result.classList.add('result');
 
-    if(mysteryNumber === guess){
-        console.log('TAMA KA');
+    if(guess === mysteryNumber){
+        result.innerText = 'YOU GUESSED IT!';
+        guessedNumber.style.backgroundColor = 'green';
+        guessedNumber.style.color = 'white';
+        result.style.color = 'green';
+        result.style.fontSize = '1.5rem';
+        result.style.fontWeight = '600';
     }
+        else if(guess < mysteryNumber){
+            result.innerText = 'HIGHER';
+        }
         else{
-            result.innerText = 'LOWER / HIGHER';
+            result.innerText = 'LOWER';
         }
     
-    guessContainer.append(guessedNumber);
-    guessContainer.append(result);
+    result.append(guessedNumber);
+    guessItem.append(result);
+    guessContainer.append(guessItem);
+
+    input.value = '';
 });
-
-
-    
-
-// console.log(mysteryNumber);
-
-// const input1 = document.querySelector('#input1');
-// const guess = input1.value;
-
