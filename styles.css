@@ -67,6 +67,7 @@ h1 {
     border-radius: 1rem;
     padding: .5rem 2rem;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .main-container #guess-container{
@@ -107,3 +108,13 @@ input[type="number"]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
 }
 
+#restart{
+    font-family: 'Bungee Spice';
+    font-size: 1.5rem;
+    border: .5rem solid var(--orange);
+    border-radius: 1rem;
+    padding: .5rem 2rem;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
